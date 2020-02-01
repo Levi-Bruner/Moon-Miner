@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Moon-Miner</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<header class="container-fluid">
+  <div class="row title-row" id="title-row">
+    <h1>Moon-Miner</h1>
+  </div>
+</header>
+
+<body>
+  <main>
+    <div class="container">
+      <div class="row pic-row" id="image-section">
+        <col-6 class="mine-button-col" id="mine-button">
+          <button onclick="mine()" type="button" id="" class="btn btn-primary mine-button" btn-lg btn-block">Mine 1
+            <span id="click-multiplier"></span></button>
+        </col-6>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row store-area" id="store-area">
+        <col-6 class="resources" id="resources">
+          <h3>Resources</h3>
+          <p>Ore: <span id="ore">0</span></p>
+          <p>Pickaxe: <span id="pickaxe">0</span></p>
+          <p>Jackhammer: <span id="jackhammer">0</span></p>
+          <p>Cart: <span id="cart">0</span></p>
+          <p>Truck: <span id="truck">0</span></p>
+        </col-6>
+        <col-6 class="store" id="store">
+          <h3>Store</h3>
+          <button onclick="buyPickaxe()" type="button" class="btn btn-primary" btn-lg btn-block">Pickaxe (50)</button>
+          <button onclick="buyJackhammer()" type="button" class="btn btn-primary" btn-lg btn-block">Jackhammer
+            (500)</button>
+          <button onclick="buyCart()" type="button" class="btn btn-primary" btn-lg btn-block">Cart
+            (1000)</button>
+          <button onclick="buyTruck()" type="button" class="btn btn-primary" btn-lg btn-block">Truck
+            (1000)</button>
+        </col-6>
+      </div>
+    </div>
+  </main>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

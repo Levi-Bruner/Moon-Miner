@@ -1,0 +1,39 @@
+.title-row {
+  justify-content: center;
+}
+
+img {
+  height: 20em;
+  width: max-content;
+}
+
+.pic-row {
+  background-image: url(https://fsb.zobj.net/crop.php?r=ndkeXgC4KbN4-hlNRcwuHfKubrA9o84LnzilrspSQbgUzWa-hBOzlTruAbLNtpf-LLRjuF_P_vLUapdrV5QxY4t5E1By_9jBMYF_ols3p6NmDK5WCAPGJHTcsRSlvVOkis-icjPmIrykQ6rB);
+  height: 55vh;
+  min-width: 100%;
+}
+
+.mine-button-col {
+  padding-top: 45vh;
+  padding-left: 5vw;
+}
+
+.mine-button {
+  width: 30vh;
+  height: 5vh;
+  background: transparent;
+}
+
+.store-area {
+  justify-content: center;
+}
+
+.resources {
+  width: 50%;
+  border: solid 2px black;
+}
+
+.store {
+  width: 50%;
+  border: solid 2px black;
+}
