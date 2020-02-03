@@ -1,4 +1,4 @@
-var ore = 0;
+var ore = 15000;
 var clickMultiplier = 0;
 var automaticMultiplier = 0;
 var oreElem = document.getElementById("ore");
@@ -75,51 +75,52 @@ function update() {
 }
 
 function buyPickaxe() {
-  var pickaxeModPrice = clickUpgrades.pickaxe.price += Math.floor((clickUpgrades.pickaxe.quantity * clickUpgrades.pickaxe.price * .10));
-  if (ore >= pickaxeModPrice) {
+  // console.log(pickaxeModPrice)
+  if (ore >= clickUpgrades.pickaxe.price) {
     clickUpgrades.pickaxe.quantity++;
-    ore -= pickaxeModPrice;
+    ore -= clickUpgrades.pickaxe.price;
     clickMultiplier += clickUpgrades.pickaxe.multiplier;
-    pPriceElem.textContent = pickaxeModPrice.toString();
     updateMultiplier();
     update();
-    console.log(pickaxeModPrice);
+    console.log();
   }
+  clickUpgrades.pickaxe.price += Math.floor((clickUpgrades.pickaxe.quantity * clickUpgrades.pickaxe.price * .10));
+  pPriceElem.textContent = clickUpgrades.pickaxe.price.toString();
 }
 //this function dynamically draws the player's resources in Resources column//
 function buyJackhammer() {
-  var jackhammerModPrice = clickUpgrades.jackhammer.price += Math.floor((clickUpgrades.jackhammer.quantity * clickUpgrades.jackhammer.price * .10));
-  if (ore >= jackhammerModPrice) {
+  if (ore >= clickUpgrades.pickaxe.price) {
     clickUpgrades.jackhammer.quantity++;
-    ore -= jackhammerModPrice;
+    ore -= clickUpgrades.jackhammer.price;
     clickMultiplier += clickUpgrades.jackhammer.multiplier;
-    jPriceElem.textContent = jackhammerModPrice.toString();
     updateMultiplier();
     update();
   }
+  clickUpgrades.jackhammer.price += Math.floor((clickUpgrades.jackhammer.quantity * clickUpgrades.jackhammer.price * .10));
+  jPriceElem.textContent = clickUpgrades.jackhammer.price.toString();
 }
 function buyCart() {
-  var cartModPrice = automaticUpgrades[0].price += Math.floor((automaticUpgrades[0].quantity * automaticUpgrades[0].price * .10));
-  if (ore >= cartModPrice) {
+  if (ore >= automaticUpgrades[0].price) {
     automaticUpgrades[0].quantity++;
-    ore -= cartModPrice;
+    ore -= automaticUpgrades[0].price;
     automaticMultiplier += automaticUpgrades[0].multiplier;
-    cPriceElem.textContent = cartModPrice.toString();
     update();
     updateMultiplier();
     interval();
   }
+  automaticUpgrades[0].price += Math.floor((automaticUpgrades[0].quantity * automaticUpgrades[0].price * .10));
+  cPriceElem.textContent = automaticUpgrades[0].price.toString();
 }
 function buyTruck() {
-  var truckModPrice = automaticUpgrades[1].price += Math.floor((automaticUpgrades[1].quantity * automaticUpgrades[1].price * .10));
-  tPriceElem.textContent = truckModPrice.toString();
-  if (ore >= truckModPrice) {
+  if (ore >= automaticUpgrades[1].price) {
     automaticUpgrades[1].quantity++;
-    ore -= truckModPrice;
+    ore -= automaticUpgrades[1].price;
     automaticMultiplier += automaticUpgrades[1].multiplier;
     update();
     updateMultiplier();
     interval();
   }
+  automaticUpgrades[1].price += Math.floor((automaticUpgrades[1].quantity * automaticUpgrades[1].price * .10));
+  tPriceElem.textContent = automaticUpgrades[1].price.toString();
 }
 
