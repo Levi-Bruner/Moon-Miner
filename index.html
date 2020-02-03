@@ -24,31 +24,39 @@
     <div class="container">
       <div class="row pic-row" id="image-section">
         <col-6 class="mine-button-col" id="mine-button">
-          <button onclick="mine()" type="button" id="" class="btn btn-primary mine-button" btn-lg btn-block">Mine 1
+          <button onclick="mine()" type="button" id="" class="btn mine-button" btn-lg btn-block">Mine 1
             <span id="click-multiplier"></span></button>
         </col-6>
       </div>
     </div>
     <div class="container-fluid">
       <div class="row store-area" id="store-area">
-        <col-6 class="resources" id="resources">
+        <col-4 class="resources" id="resources">
           <h3>Resources</h3>
           <p>Ore: <span id="ore">0</span></p>
           <p>Pickaxe: <span id="pickaxe">0</span></p>
           <p>Jackhammer: <span id="jackhammer">0</span></p>
           <p>Cart: <span id="cart">0</span></p>
           <p>Truck: <span id="truck">0</span></p>
-        </col-6>
-        <col-6 class="store" id="store">
+        </col-4>
+        <col-4 class="store" id="store">
           <h3>Store</h3>
-          <button onclick="buyPickaxe()" type="button" class="btn btn-primary" btn-lg btn-block">Pickaxe (50)</button>
-          <button onclick="buyJackhammer()" type="button" class="btn btn-primary" btn-lg btn-block">Jackhammer
-            (500)</button>
-          <button onclick="buyCart()" type="button" class="btn btn-primary" btn-lg btn-block">Cart
-            (1000)</button>
-          <button onclick="buyTruck()" type="button" class="btn btn-primary" btn-lg btn-block">Truck
-            (1000)</button>
-        </col-6>
+          <p><button onclick="buyPickaxe()" type="button" class="btn btn-primary but" btn-lg">Pickaxe</button> (<span
+              id="p-price">50</span>) ore</p>
+          <p><button onclick="buyJackhammer()" type="button" class="btn btn-primary but" btn-lg">Jackhammer</button>
+            (<span id="j-price">500</span>) ore</p>
+          <p><button onclick="buyCart()" type="button" class="btn btn-primary but" btn-lg btn">Cart</button> (<span
+              id="c-price">1000</span>) ore</p>
+          <p><button onclick="buyTruck()" type="button" class="btn btn-primary but" btn-lg">Truck</button> (<span
+              id="t-price">10000</span>) ore</p>
+        </col-4>
+        <col-4 class="stats" id="stats">
+          <h3>Stats</h3>
+          <p>Pickaxe : +1 per mine</p>
+          <p>Jackhammer : +5 per mine</p>
+          <p>Cart : +50 ore / 3 seconds</p>
+          <p>Truck : +100 ore / 3 seconds</p>
+        </col-4>
       </div>
     </div>
   </main>

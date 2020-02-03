@@ -2,26 +2,22 @@
   justify-content: center;
 }
 
-img {
-  height: 20em;
-  width: max-content;
-}
-
 .pic-row {
-  background-image: url(https://fsb.zobj.net/crop.php?r=ndkeXgC4KbN4-hlNRcwuHfKubrA9o84LnzilrspSQbgUzWa-hBOzlTruAbLNtpf-LLRjuF_P_vLUapdrV5QxY4t5E1By_9jBMYF_ols3p6NmDK5WCAPGJHTcsRSlvVOkis-icjPmIrykQ6rB);
+  background-image: url(https://nineplanets.org/wp-content/uploads/2019/09/moon.png);
+  background-repeat: no-repeat;
   height: 55vh;
-  min-width: 100%;
 }
-
 .mine-button-col {
-  padding-top: 45vh;
-  padding-left: 5vw;
+  padding-top: 5vh;
+  padding-left: 6rem;
 }
 
 .mine-button {
-  width: 30vh;
-  height: 5vh;
+  width: 43vh;
+  height: 43vh;
+  border-radius: 50%;
   background: transparent;
+  color: white;
 }
 
 .store-area {
@@ -29,11 +25,23 @@ img {
 }
 
 .resources {
-  width: 50%;
+  width: 33%;
+  border: solid 2px black;
+}
+
+.stats {
+  width: 33%;
   border: solid 2px black;
 }
 
 .store {
-  width: 50%;
+  width: 33%;
   border: solid 2px black;
+  /* display: flex;
+  flex-direction: column;
+  align-items: flex-start; */
+}
+
+.but {
+  width: 8rem;
 }
